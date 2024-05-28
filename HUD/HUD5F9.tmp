@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://tps7m8glpkt1"]
+
+[ext_resource type="FontFile" uid="uid://bk7drg3ln0rfl" path="res://HUD/fonts/retrofont.ttf" id="1_2m4p0"]
+[ext_resource type="Script" path="res://HUD/HUD.gd" id="1_f4vmq"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_f4vmq")
+
+[node name="Score label" type="Label" parent="."]
+offset_top = 3.0
+offset_right = 131.0
+offset_bottom = 34.0
+theme_override_fonts/font = ExtResource("1_2m4p0")
+theme_override_font_sizes/font_size = 24
+text = "SCORE: 0"
+
+[node name="High score label" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -213.0
+offset_bottom = 34.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_2m4p0")
+theme_override_font_sizes/font_size = 24
+text = "HIGH SCORE: 0"
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.5
+offset_top = -26.5
+offset_right = 56.5
+offset_bottom = 26.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_2m4p0")
+theme_override_font_sizes/font_size = 65
+text = "PLEI"
+
+[node name="Score Timer" type="Timer" parent="."]
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

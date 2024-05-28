@@ -1,0 +1,6 @@
+res://background/background.tscn
+res://dinoplayer/player.tscn
+res://floor/piso.tscn
+res://main.tscn
+res://HUD/HUD.tscn
+res://mob/mob.tscn
