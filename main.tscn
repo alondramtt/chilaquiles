@@ -1,12 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://bhp83s8bob7o1"]
+[gd_scene load_steps=6 format=3 uid="uid://bhp83s8bob7o1"]
 
 [ext_resource type="PackedScene" uid="uid://d3fg0yfukricl" path="res://background/background.tscn" id="1_6o4i1"]
 [ext_resource type="Script" path="res://main.gd" id="1_gihdr"]
 [ext_resource type="PackedScene" uid="uid://dci7vkdu2aeow" path="res://floor/piso.tscn" id="2_22dbf"]
+[ext_resource type="PackedScene" uid="uid://dtfg4yb5wf1tm" path="res://mob/mob.tscn" id="2_27378"]
 [ext_resource type="PackedScene" uid="uid://bjne7h650mdpw" path="res://dinoplayer/player.tscn" id="2_ad7ow"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_gihdr")
+mob_scene = ExtResource("2_27378")
 
 [node name="Background" parent="." instance=ExtResource("1_6o4i1")]
 

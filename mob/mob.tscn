@@ -10,27 +10,32 @@ size = Vector2(127, 129)
 [node name="Mob" type="Area2D"]
 script = ExtResource("1_6sm6o")
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(-10, -10)
-
-[node name="SquareCollision" type="CollisionShape2D" parent="."]
+[node name="LaRocaCollision" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-63.5, -64.5)
 shape = SubResource("RectangleShape2D_gh3yv")
+disabled = true
 
-[node name="Sprite2D" type="Sprite2D" parent="SquareCollision"]
+[node name="LaRoca" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-5.36442e-06, -1.19209e-06)
+position = Vector2(-63.5, -64.5)
 scale = Vector2(0.248047, 0.251953)
 texture = ExtResource("2_f8kc4")
 
-[node name="SquareC" type="CollisionShape2D" parent="."]
+[node name="ArdillaCollision" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-63.5, -64.5)
 shape = SubResource("RectangleShape2D_gh3yv")
+disabled = true
 
-[node name="Sprite2D" type="Sprite2D" parent="SquareC"]
+[node name="Ardilla" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(3.8147e-06, -0.499998)
+position = Vector2(-63.5, -65)
 scale = Vector2(0.248047, 0.25)
 texture = ExtResource("3_63q4f")
 
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-10, -10)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

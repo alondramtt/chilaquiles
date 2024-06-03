@@ -4,3 +4,5 @@ res://floor/piso.tscn
 res://main.tscn
 res://HUD/HUD.tscn
 res://mob/mob.tscn
+res://mob/mob.gd
+res://HUD/HUD.gd
