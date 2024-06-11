@@ -5,6 +5,7 @@ signal start_game_btn
 var score = 0 
 var highscore = 0
 var is_playing = false
+var mob_counter = 0
 
 func update_score_label():
 	score = score + 10
@@ -15,7 +16,7 @@ func update_high_score():
 		highscore = score
 		$HighScoreLabel.text = "High Score: %d"%(highscore)
 	is_playing = false
-	$ScoreTimer.stop()
+	$ScoreTimer.start()
 	$Button.visible = true
 
 func _on_button_pressed():

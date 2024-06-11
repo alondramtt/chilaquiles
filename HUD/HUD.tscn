@@ -41,7 +41,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_2m4p0")
 theme_override_font_sizes/font_size = 65
-text = "PLEI"
+text = "JUEGAR"
 
 [node name="ScoreTimer" type="Timer" parent="."]
 

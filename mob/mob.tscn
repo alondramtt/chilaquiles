@@ -1,41 +1,107 @@
-[gd_scene load_steps=5 format=3 uid="uid://dtfg4yb5wf1tm"]
+[gd_scene load_steps=10 format=3 uid="uid://dtfg4yb5wf1tm"]
 
 [ext_resource type="Script" path="res://mob/mob.gd" id="1_6sm6o"]
 [ext_resource type="Texture2D" uid="uid://dy2kupsgkvgcg" path="res://mob/piedra.png" id="2_f8kc4"]
 [ext_resource type="Texture2D" uid="uid://c7pl53okq436g" path="res://mob/ardilla.png" id="3_63q4f"]
+[ext_resource type="Texture2D" uid="uid://djn70jj24co2l" path="res://IMG_6616.jpeg" id="4_yj0a8"]
+[ext_resource type="Texture2D" uid="uid://b1t6jmm6wuuq3" path="res://sprite4.jpg" id="5_3a0bi"]
+[ext_resource type="Texture2D" uid="uid://5fmy3ba0ffn8" path="res://sprite3.jpg" id="6_ixijr"]
+[ext_resource type="Texture2D" uid="uid://kcbeuqaxai11" path="res://sprite2.jpg" id="7_spak6"]
+[ext_resource type="Texture2D" uid="uid://bfogj26dodd2k" path="res://sprite.jpg" id="8_3rdow"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gh3yv"]
-size = Vector2(127, 129)
+size = Vector2(136, 150)
 
 [node name="Mob" type="Area2D"]
 script = ExtResource("1_6sm6o")
 
 [node name="LaRocaCollision" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(-63.5, -64.5)
+position = Vector2(-68.25, -139.75)
 shape = SubResource("RectangleShape2D_gh3yv")
 disabled = true
 
 [node name="LaRoca" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-63.5, -64.5)
-scale = Vector2(0.248047, 0.251953)
+position = Vector2(-68.5, -139.262)
+scale = Vector2(0.263672, 0.24507)
 texture = ExtResource("2_f8kc4")
 
 [node name="ArdillaCollision" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(-63.5, -64.5)
+position = Vector2(-68.8968, -147.5)
 shape = SubResource("RectangleShape2D_gh3yv")
 disabled = true
 
 [node name="Ardilla" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-63.5, -65)
-scale = Vector2(0.248047, 0.25)
+position = Vector2(-68.8968, -147.5)
+scale = Vector2(0.262122, 0.248047)
 texture = ExtResource("3_63q4f")
 
+[node name="SCollision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-63.5, -267.254)
+shape = SubResource("RectangleShape2D_gh3yv")
+disabled = true
+
+[node name="Shoyo" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-63.5794, -266.377)
+scale = Vector2(0.240865, 0.249494)
+texture = ExtResource("4_yj0a8")
+
+[node name="YCollision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-68.5938, -142.875)
+shape = SubResource("RectangleShape2D_gh3yv")
+disabled = true
+
+[node name="Hitoka" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-64.5, -142)
+scale = Vector2(0.679144, 0.745098)
+texture = ExtResource("5_3a0bi")
+
+[node name="SACollision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-63, -143.235)
+shape = SubResource("RectangleShape2D_gh3yv")
+disabled = true
+
+[node name="Suga" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-63.127, -143.235)
+scale = Vector2(0.749977, 0.745098)
+texture = ExtResource("6_ixijr")
+
+[node name="YMCollision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-73.1094, -169.51)
+shape = SubResource("RectangleShape2D_gh3yv")
+disabled = true
+
+[node name="Yamaguchi" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-72, -168.755)
+scale = Vector2(0.731959, 0.733126)
+texture = ExtResource("7_spak6")
+
+[node name="NCollision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-64.683, -278)
+shape = SubResource("RectangleShape2D_gh3yv")
+disabled = true
+
+[node name="Yuu" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-64.683, -278)
+scale = Vector2(0.707948, 0.616822)
+texture = ExtResource("8_3rdow")
+
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(-10, -10)
+position = Vector2(-136.75, -137.6)
+scale = Vector2(13.625, 13.64)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
