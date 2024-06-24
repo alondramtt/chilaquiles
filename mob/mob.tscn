@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bfogj26dodd2k" path="res://sprite.jpg" id="8_3rdow"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gh3yv"]
-size = Vector2(136, 150)
+size = Vector2(76.1835, 85)
 
 [node name="Mob" type="Area2D"]
 script = ExtResource("1_6sm6o")
@@ -53,38 +53,39 @@ texture = ExtResource("4_yj0a8")
 
 [node name="YCollision" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(-68.5938, -142.875)
+position = Vector2(-65.9082, -142.5)
 shape = SubResource("RectangleShape2D_gh3yv")
 disabled = true
 
 [node name="Hitoka" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(-64.5, -142)
-scale = Vector2(0.679144, 0.745098)
+scale = Vector2(0.438827, 0.432415)
 texture = ExtResource("5_3a0bi")
 
 [node name="SACollision" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(-63, -143.235)
+position = Vector2(-70.7774, -146.995)
 shape = SubResource("RectangleShape2D_gh3yv")
 disabled = true
 
 [node name="Suga" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(-63.127, -143.235)
-scale = Vector2(0.749977, 0.745098)
+scale = Vector2(0.589977, 0.619349)
 texture = ExtResource("6_ixijr")
 
 [node name="YMCollision" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(-73.1094, -169.51)
+position = Vector2(-92.5547, -183.755)
+scale = Vector2(0.958922, 0.969016)
 shape = SubResource("RectangleShape2D_gh3yv")
 disabled = true
 
 [node name="Yamaguchi" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(-72, -168.755)
-scale = Vector2(0.731959, 0.733126)
+scale = Vector2(0.651958, 0.613126)
 texture = ExtResource("7_spak6")
 
 [node name="NCollision" type="CollisionShape2D" parent="."]
@@ -101,7 +102,7 @@ texture = ExtResource("8_3rdow")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(-136.75, -137.6)
-scale = Vector2(13.625, 13.64)
+scale = Vector2(13.412, 13.5791)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

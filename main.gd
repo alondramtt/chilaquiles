@@ -12,7 +12,8 @@ func _ready():
 	GHUD .start_game_btn.connect(new_game)
 
 func new_game():
-	$Player.position = PlayerInitialPosition
+	print("tilino")
+	$Player.position = PlayerInitialPosition 
 	$Piso.position.x = 0 
 	$MobTimer.start() 
 
